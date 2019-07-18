@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="origin_data" uuid="2e123215-0242-437e-89c4-4726ff446640">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:</introspection-schemas>
+    </data-source>
+    <data-source name="origin_data [2]" uuid="f085e044-9afa-4d26-8c6d-7730a7c5e159">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+  </component>
+</project>

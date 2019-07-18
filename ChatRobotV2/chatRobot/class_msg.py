@@ -15,7 +15,7 @@ class Msg:
 
   def __init__(self,frame):
     # my message record
-    self.int_msg = scrolledtext.ScrolledText(frame.fra_int,width=32,height=22,background="#c9daf8")
+    self.int_msg = scrolledtext.ScrolledText(frame.fra_int,width=32,height=22,background="#c9daf8")#创建滚动文本框
     self.int_msg.tag_configure('beg', foreground='#1c4587', 
                         font=font)
     self.int_msg.tag_configure('color', foreground='#3c78d8', 
@@ -37,7 +37,7 @@ class Msg:
     self.send_music = Music()
 
 
-  def create_conns(self):
+  def create_conns(self):#创建联系人
     self.conns = [People(self,name) for name in conns_dict['people']]
     self.conns = self.conns + [Bolt(self,name) for name in conns_dict['bolt']]
     self.conns = self.conns + [Translator(self,name) for name in conns_dict['trans']]
@@ -72,7 +72,7 @@ class Msg:
       conn.create_button(frame)
 
 
-  def crt_grid(self):
+  def crt_grid(self):#排布位置
     self.but_send.pack(side="left")
     self.int_msg.grid()
     self.msg.grid()
@@ -98,8 +98,9 @@ class Msg:
     if Music.switch_on:
       self.send_music.msg_sound()
 
-    intro = "少爷: "
+    intro = "我: "
     raw_sen = self.msg.get('0.0',END)
+    print(raw_sen)
     self.cur_conn.change_msg_for_url(raw_sen)
     # 实现自学习，得到用户的语句，之后进行分析，做出回答
     # with open("D:\\text\\result.txt",'a') as f:

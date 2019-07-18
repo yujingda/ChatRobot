@@ -5,7 +5,7 @@ class Data:
   def __init__(self,p="./text/xiongchuyuan.txt"):
     self.path = p
 
-  def process_data(self,f):
+  def process_data(self,f):#连词成句
     sens = f.read().split('。')
     res = []
     flag = 0
@@ -21,14 +21,14 @@ class Data:
     return res
 
 
-  def get_data(self):
+  def get_data(self):#进行回复
     if self.path == "./text/poem.txt" or self.path =="./text/result.txt":
       f = open(self.path,'r',encoding='gbk')
     else:
       f = open(self.path,'r',encoding="utf-8")
     # 用处理过的数据
     # res = process_data(f)
-    res = f.readlines()
+    res = f.readlines()#读取所有行
     pos_reply=res+ [u'大宝贝你好',u"要开心呦",u"人家还是个孩子哩",u"然后呢",u"所以，你还要我怎样",u"不听不听，王八念经"]
     f.close()
     self.pos_reply = pos_reply

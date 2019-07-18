@@ -11,13 +11,11 @@ class Music:
     self.start_bool = True
     pygame.mixer.init()
 
-
   def msg_sound(self):
     filename = self.filename.encode("UTF-8")
     pygame.mixer.init()
     pygame.mixer.music.load(filename)
     pygame.mixer.music.play(0,0.2)
-
 
   def bg_sound(self):    
     if self.start_bool==True:
@@ -28,10 +26,8 @@ class Music:
     else:
       pygame.mixer.music.unpause()
 
-
   def track_pause(self):
     pygame.mixer.music.pause()
-
 
   def track_stop(self):
     pygame.mixer.music.stop()

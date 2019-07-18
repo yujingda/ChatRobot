@@ -28,12 +28,12 @@ class Connector:
 
 
 
-class Bolt(Connector):
+class Bolt(Connector):#t图灵机器人
 	def __init__(self,msg,name):
 		Connector.__init__(self,msg,name)
 		  # 自动回复，设随机数，规定回复的格式细节
 	def auto_reply(self):
-		key = "86a516ab67a64ed29f28bb683e77e1f8"      
+		key = "212aa2bf751a4fb7a83c567714796181"
 		url = "http://www.tuling123.com/openapi/api?key=" + key + "&info=" + self.msg_for_url
 		html = requests.get(url)
 		fin_msg = html.json()['text']+'\n'
@@ -90,7 +90,7 @@ class People(Connector):
 
 	def auto_reply(self):
 		while self.i==self.j:
-		  self.i = random.randint(0, len(self.pos_reply))
+			self.i = random.randint(0, len(self.pos_reply))
 		self.j = self.i
 		fin_msg = self.pos_reply[self.i]+'\n'
 		return fin_msg
@@ -100,9 +100,3 @@ class People(Connector):
 class MovieRecomm(People):
 	def __init__(self,msg,name):
 		People.__init__(self,msg,name)
-
-
-
-
-
-

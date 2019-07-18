@@ -12,8 +12,6 @@ def make_soup(html,n):
 	soup = BeautifulSoup(html.text,'html.parser')
 	orign = soup.find('ol',class_="grid_view")
 	a = orign.find_all('li')
-	
-	
 	for i in a:
 		data = []
 		if i.find('span',class_='title'):
@@ -29,7 +27,6 @@ def make_soup(html,n):
 		else:
 			data.append("无")
 		movies.append(data)
-
 	with open("D:\\ChatRobot\\ChatRobotV2\\text\\db_movie.txt",'a',encoding='utf-8') as f:
 		# f.write(s.format("电影名称","评分","短评",chr(12288))+'\n')
 		an = 0

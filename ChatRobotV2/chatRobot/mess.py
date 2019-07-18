@@ -3,6 +3,7 @@
 '''1.字体使用'''
 # -*- coding: utf-8 -*-
 # 改变组件的显示字体
+#没有任何用处
 from tkinter import *
 import tkinter.font as tkFont
 
